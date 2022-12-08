@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+    background-color: rgb(56, 32, 102);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.bar_logo{
+    color: white;
+    font-size: 24px;
+}
+
+.bar_logo i{
+    color: coral;
+}
+
+.bar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.bar_menu li{
+    margin: 0px;
+    padding: 10px 12px;
+}
+
+.bar_links{
+    padding: 0;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    list-style: none;
+}
+
+.bar_menu li:hover{
+    background-color: coral;
+    border-radius: 4px;
+}
+
+.bar_links li{
+    padding: 8px 12px;
+}
+
+.bar_toolbtn{
+    position: absolute;
+    right: 32px;
+    padding: 0px 3px;
+    font-size: 22px;
+    color: coral;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .bar_menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .bar_menu li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .bar_links {
+        justify-content: center;
+        width: 100%;
+        display: none;
+    }
+
+    .bar_toolbtn{
+        display: block;
+    }
+
+    .bar_menu.active,
+    .bar_links.active {
+        display: flex;
+    }
+}
